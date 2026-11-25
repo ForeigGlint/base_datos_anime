@@ -1,0 +1,26 @@
+﻿archivo,variable,descripcion
+01_animes_limpios.csv,anime_id,"Identificador único del anime; llave, no predictor"
+01_animes_limpios.csv,nombre,Nombre del anime con entidades HTML convertidas
+01_animes_limpios.csv,generos,Lista de géneros separada por |
+01_animes_limpios.csv,genero_principal,Primer género registrado; variable categórica
+01_animes_limpios.csv,numero_generos,Cantidad de géneros asociados al anime
+01_animes_limpios.csv,tipo,"Formato: TV, Movie, OVA, ONA, Special o Music"
+01_animes_limpios.csv,episodios,"Número de episodios, entero positivo"
+01_animes_limpios.csv,miembros,Número de miembros del anime en la fuente
+01_animes_limpios.csv,log_miembros,"log(1 + miembros), reduce asimetría"
+01_animes_limpios.csv,log_episodios,"log(1 + episodios), reduce asimetría"
+01_animes_limpios.csv,rating_promedio,Media de calificación del anime; OBJETIVO para regresión; no predictor de alta_calificacion
+01_animes_limpios.csv,alta_calificacion,"Objetivo binario: 1 si rating_promedio >= 7, 0 en otro caso"
+02_animes_numericos_para_modelos.csv,tipo_*,Indicadores 0/1 del formato de anime (one-hot)
+02_animes_numericos_para_modelos.csv,genero_*,Indicadores 0/1 de 12 géneros más frecuentes (multietiqueta)
+03_valoraciones_muestra.csv,usuario_id,"Identificador de la persona, no predictor directo"
+03_valoraciones_muestra.csv,anime_id,Clave para relacionar valoración con catálogo
+03_valoraciones_muestra.csv,nombre_anime,"Nombre del anime, de uso descriptivo"
+03_valoraciones_muestra.csv,tipo,Formato del anime
+03_valoraciones_muestra.csv,genero_principal,Género principal del anime
+03_valoraciones_muestra.csv,numero_generos,Número de géneros del anime
+03_valoraciones_muestra.csv,episodios,Número de episodios del anime
+03_valoraciones_muestra.csv,miembros,Número de miembros del anime
+03_valoraciones_muestra.csv,log_miembros,Transformación logarítmica de miembros
+03_valoraciones_muestra.csv,calificacion_usuario,Calificación individual de 1 a 10; objetivo para regresión
+03_valoraciones_muestra.csv,le_gusto,Objetivo binario: 1 si calificacion_usuario >= 8
